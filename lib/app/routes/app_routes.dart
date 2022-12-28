@@ -7,7 +7,7 @@ class AppRoutes {
   static const INITIAL_ROUTE = '/';
 
   //Get Started
-  static const GET_STARTED = 'get_started';
+  static const GET_STARTED = '/get_started';
 
   static final ROUTES = [
     // splash Route
