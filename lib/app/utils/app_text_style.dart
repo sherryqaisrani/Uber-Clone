@@ -13,12 +13,12 @@ TextStyle get regular64 {
   ));
 }
 
-TextStyle get regular16 {
+TextStyle get regular20 {
   return GoogleFonts.openSans(
       textStyle: TextStyle(
     fontWeight: FontWeight.w600,
     fontFamily: 'Open Sans',
-    fontSize: 16.sp,
+    fontSize: 20.sp,
     color: AppColors.LIGHT_WHITE,
   ));
 }

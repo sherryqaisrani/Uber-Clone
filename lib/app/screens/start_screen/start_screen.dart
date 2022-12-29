@@ -1,3 +1,4 @@
+import 'package:fitness_app/app/screens/start_screen/components/body.dart';
 import 'package:flutter/material.dart';
 
 class StartScreen extends StatelessWidget {
@@ -5,6 +6,8 @@ class StartScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return const Scaffold(
+      body: Body(),
+    );
   }
 }
