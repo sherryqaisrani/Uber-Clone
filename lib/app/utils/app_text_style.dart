@@ -13,12 +13,42 @@ TextStyle get regular64 {
   ));
 }
 
+TextStyle get regular30 {
+  return GoogleFonts.openSans(
+      textStyle: TextStyle(
+    fontWeight: FontWeight.w600,
+    fontFamily: 'Roboto',
+    fontSize: 30.sp,
+    color: AppColors.LIGHT_WHITE,
+  ));
+}
+
+TextStyle get regular24 {
+  return GoogleFonts.openSans(
+      textStyle: TextStyle(
+    fontWeight: FontWeight.w600,
+    fontFamily: 'Roboto',
+    fontSize: 24.sp,
+    color: AppColors.LIGHT_WHITE,
+  ));
+}
+
 TextStyle get regular20 {
   return GoogleFonts.openSans(
       textStyle: TextStyle(
     fontWeight: FontWeight.w600,
     fontFamily: 'Open Sans',
     fontSize: 20.sp,
+    color: AppColors.LIGHT_WHITE,
+  ));
+}
+
+TextStyle get regular16 {
+  return GoogleFonts.openSans(
+      textStyle: TextStyle(
+    fontWeight: FontWeight.w600,
+    fontFamily: 'Open Sans',
+    fontSize: 16.sp,
     color: AppColors.LIGHT_WHITE,
   ));
 }

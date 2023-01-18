@@ -15,4 +15,6 @@ class AppColors {
   static const Color SECOND_LIGHT_GRAY_COLOR = Color(0xffBDBDBD);
   // blac Color
   static const Color BLACK_COLOR = Color(0xff000000);
+  // Dark Gray Color
+  static const Color DARK_GRAY = Color(0xff979797);
 }

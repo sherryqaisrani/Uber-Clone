@@ -16,75 +16,75 @@ class GenericButton extends StatelessWidget {
     Key? key,
     required this.buttonName,
     required this.callback,
-    this.shadowColor = AppColors.SECONDARY_COLOR,
+    this.shadowColor,
     this.isGredient = false,
-    this.backgroundColor,
+    this.backgroundColor = AppColors.BLACK_COLOR,
     this.svgPath,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(
-        horizontal: 36.w,
-      ),
-      child: Container(
-        width: double.maxFinite,
-        height: 58.h,
-        decoration: BoxDecoration(
-          color: backgroundColor ?? AppColors.PRIMARY_COLOR,
-          boxShadow: [
-            BoxShadow(
-              offset: const Offset(1, 1),
-              color: shadowColor!,
-              blurRadius: 4,
-            ),
-            BoxShadow(
-              offset: const Offset(-1, 0),
-              color: shadowColor!,
-              blurRadius: 4,
-            )
-          ],
-          gradient: isGredient!
-              ? const LinearGradient(
-                  begin: Alignment(-1.0, -2.0),
-                  end: Alignment(1.0, -2.0),
-                  colors: [
-                      AppColors.SECONDARY_COLOR,
-                      AppColors.SECOND_SECONDARY_COLOR,
-                    ],
-                  stops: [
-                      0,
-                      100
-                    ])
-              : null,
-        ),
-        child: ElevatedButton(
-          onPressed: callback,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text(
-                buttonName,
-                style: regular20.copyWith(
-                  fontWeight: FontWeight.w700,
-                  fontFamily: 'Roboto',
-                ),
-              ),
-              SizedBox(
-                width: 7.w,
-              ),
-              Padding(
-                padding: EdgeInsets.symmetric(
-                  vertical: 17.h,
-                ),
-                child: SvgPicture.asset(
-                  svgPath!,
-                ),
-              ),
-            ],
+    return Container(
+      width: double.maxFinite,
+      height: 58.h,
+      decoration: BoxDecoration(
+        color: backgroundColor,
+        boxShadow: [
+          BoxShadow(
+            offset: const Offset(1, 1),
+            color: shadowColor ?? Colors.transparent,
+            blurRadius: 4,
           ),
+          BoxShadow(
+            offset: const Offset(-1, 0),
+            color: shadowColor ?? Colors.transparent,
+            blurRadius: 4,
+          )
+        ],
+        gradient: isGredient!
+            ? const LinearGradient(
+                begin: Alignment(-1.0, -2.0),
+                end: Alignment(1.0, -2.0),
+                colors: [
+                    AppColors.SECONDARY_COLOR,
+                    AppColors.SECOND_SECONDARY_COLOR,
+                  ],
+                stops: [
+                    0,
+                    100
+                  ])
+            : null,
+      ),
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: backgroundColor,
+        ),
+        onPressed: callback,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(
+              buttonName,
+              style: regular20.copyWith(
+                fontWeight: FontWeight.w700,
+                fontFamily: 'Roboto',
+              ),
+            ),
+            SizedBox(
+              width: 7.w,
+            ),
+            svgPath != null
+                ? Padding(
+                    padding: EdgeInsets.symmetric(
+                      vertical: 17.h,
+                    ),
+                    child: SvgPicture.asset(
+                      svgPath!,
+                    ),
+                  )
+                : SizedBox(),
+          ],
         ),
       ),
     );
