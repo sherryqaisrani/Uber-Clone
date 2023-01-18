@@ -5,4 +5,5 @@ class AppStrings {
   static const String enterMobileNumber = 'Enter your mobile number';
   static const String orSocialContact = 'Or connect with social';
   static const String nextBtnName = 'Next';
+  static const String chooseanAccount = 'Choose an account';
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/animation.dart';
+import 'package:flutter/material.dart';
 
 class AppColors {
   // primary color
@@ -17,4 +18,6 @@ class AppColors {
   static const Color BLACK_COLOR = Color(0xff000000);
   // Dark Gray Color
   static const Color DARK_GRAY = Color(0xff979797);
+  // Dark Gray Color
+  static Color ERROR_COLOR = Colors.red.shade600;
 }

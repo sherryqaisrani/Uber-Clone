@@ -87,7 +87,7 @@ class Body extends StatelessWidget {
           ),
           GestureDetector(
             onTap: () => Get.toNamed(
-              AppRoutes.LOGIN,
+              AppRoutes.login,
             ),
             child: Container(
               width: double.maxFinite,
@@ -95,7 +95,7 @@ class Body extends StatelessWidget {
                 horizontal: 70.w,
               ),
               decoration: BoxDecoration(
-                  gradient: LinearGradient(
+                  gradient: const LinearGradient(
                     colors: [
                       AppColors.SECONDARY_COLOR,
                       AppColors.SECOND_SECONDARY_COLOR

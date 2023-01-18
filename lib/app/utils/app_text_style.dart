@@ -29,7 +29,7 @@ TextStyle get regular24 {
     fontWeight: FontWeight.w600,
     fontFamily: 'Roboto',
     fontSize: 24.sp,
-    color: AppColors.LIGHT_WHITE,
+    color: AppColors.LIGHT_GRAY_COLOR,
   ));
 }
 
@@ -39,7 +39,17 @@ TextStyle get regular20 {
     fontWeight: FontWeight.w600,
     fontFamily: 'Open Sans',
     fontSize: 20.sp,
-    color: AppColors.LIGHT_WHITE,
+    color: AppColors.LIGHT_GRAY_COLOR,
+  ));
+}
+
+TextStyle get regular18 {
+  return GoogleFonts.openSans(
+      textStyle: TextStyle(
+    fontWeight: FontWeight.w600,
+    fontFamily: 'Open Sans',
+    fontSize: 18.sp,
+    color: AppColors.LIGHT_GRAY_COLOR,
   ));
 }
 
@@ -49,7 +59,7 @@ TextStyle get regular16 {
     fontWeight: FontWeight.w600,
     fontFamily: 'Open Sans',
     fontSize: 16.sp,
-    color: AppColors.LIGHT_WHITE,
+    color: AppColors.LIGHT_GRAY_COLOR,
   ));
 }
 
@@ -59,7 +69,7 @@ TextStyle get regular14 {
     fontWeight: FontWeight.w600,
     fontSize: 14.sp,
     fontFamily: 'Open Sans',
-    color: AppColors.LIGHT_WHITE,
+    color: AppColors.LIGHT_GRAY_COLOR,
   ));
 }
 
@@ -69,7 +79,7 @@ TextStyle get regular12 {
     fontWeight: FontWeight.w500,
     fontSize: 12.sp,
     fontFamily: 'Open Sans',
-    color: AppColors.LIGHT_WHITE,
+    color: AppColors.LIGHT_GRAY_COLOR,
   ));
 }
 
@@ -79,6 +89,6 @@ TextStyle get regular10 {
     fontWeight: FontWeight.w500,
     fontSize: 10.sp,
     fontFamily: 'Open Sans',
-    color: AppColors.LIGHT_WHITE,
+    color: AppColors.LIGHT_GRAY_COLOR,
   ));
 }

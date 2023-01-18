@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
           ),
           home: child,
           getPages: AppRoutes.ROUTES,
-          initialRoute: AppRoutes.INITIAL_ROUTE,
+          initialRoute: AppRoutes.initialRoute,
         );
       },
     );

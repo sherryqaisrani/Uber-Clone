@@ -1,6 +1,7 @@
 import 'package:country_pickers/country.dart';
 import 'package:country_pickers/country_pickers.dart';
 import 'package:fitness_app/app/controllers/login_controller.dart';
+import 'package:fitness_app/app/routes/app_routes.dart';
 import 'package:fitness_app/app/utils/app_colors.dart';
 import 'package:fitness_app/app/utils/app_strings.dart';
 import 'package:fitness_app/app/utils/app_text_style.dart';
@@ -46,19 +47,24 @@ class LoginScreen extends StatelessWidget {
               SizedBox(
                 height: 25.h,
               ),
-              Row(
-                children: [
-                  Text(
-                    AppStrings.orSocialContact,
-                    style: regular24.copyWith(
+              GestureDetector(
+                onTap: () => Get.toNamed(
+                  AppRoutes.loginWithSocial,
+                ),
+                child: Row(
+                  children: [
+                    Text(
+                      AppStrings.orSocialContact,
+                      style: regular24.copyWith(
+                        color: AppColors.SECONDARY_COLOR,
+                      ),
+                    ),
+                    Icon(
+                      Icons.arrow_forward,
                       color: AppColors.SECONDARY_COLOR,
                     ),
-                  ),
-                  Icon(
-                    Icons.arrow_forward,
-                    color: AppColors.SECONDARY_COLOR,
-                  ),
-                ],
+                  ],
+                ),
               ),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.4,
@@ -66,14 +72,18 @@ class LoginScreen extends StatelessWidget {
               Text(
                 'By continuing you may recieve an SMS for\nverification. Message and data rates may apply.',
                 style: regular16.copyWith(
-                  color: AppColors.DARK_GRAY,
+                  color: AppColors.LIGHT_GRAY_COLOR,
                 ),
               ),
               SizedBox(
                 height: 24.h,
               ),
               GenericButton(
-                  buttonName: AppStrings.nextBtnName, callback: () {}),
+                buttonName: AppStrings.nextBtnName,
+                callback: () => Get.toNamed(
+                  AppRoutes.otpPage,
+                ),
+              ),
             ],
           ),
         );
